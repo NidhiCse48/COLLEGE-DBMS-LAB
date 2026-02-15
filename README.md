@@ -221,7 +221,7 @@ To implement a real-world College Database using ER modeling and SQL queries wit
 
 ---
 
-## 💻 SQL Work Completed
+##  SQL Work Completed
 ✔ CREATE TABLE queries  
 ✔ INSERT INTO queries (Minimum 10 records in Student, Course, Enrollment)  
 ✔ Foreign key constraints applied  
@@ -229,7 +229,7 @@ To implement a real-world College Database using ER modeling and SQL queries wit
 
 ---
 
-## 📂 Submission Includes
+##  Submission Includes
 - SQL file (All CREATE + INSERT queries)
 - ER Diagram (created using draw.io)
 - Screenshots of successful execution
