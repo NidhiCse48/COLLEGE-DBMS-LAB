@@ -1,0 +1,43 @@
+CREATE TABLE Department(
+    DepartmentID INT PRIMARY KEY,
+    DepartmentName VARCHAR(50),
+   OfficeLocation VARCHAR(50)
+   );
+ CREATE TABLE Student(
+    StudentID INT PRIMARY KEY,
+     Name VARCHAR2(50),
+    Gender VARCHAR2(10),
+    DateOfBirth DATE,
+     ContactNumber VARCHAR2(15),
+     DepartmentID INT,
+    FOREIGN KEY (DepartmentID) REFERENCES
+     Department(DepartmentID)
+   );
+CREATE TABLE Faculty(
+    FacultyID INT PRIMARY KEY,
+    Name VARCHAR(50),
+    Designation VARCHAR(50),
+    Email VARCHAR(50),
+    DepartmentID INT,
+    FOREIGN KEY(DepartmentID) REFERENCES
+    Department(DepartmentID)
+    );
+ CREATE TABLE Course(
+    CourseID INT PRIMARY KEY,
+      CourseName VARCHAR2(50),
+     Credits INT,
+     DepartmentID INT,
+    FacultyID INT,
+     FOREIGN KEY (DepartmentID) REFERENCES  Department(DepartmentID),
+     FOREIGN KEY(FacultyID) REFERENCES  Faculty(FacultyID)
+    );
+ CREATE TABLE Enrollment(
+   EnrollmentID INT PRIMARY KEY,
+    StudentID INT,
+    CourseID INT,
+    Semester VARCHAR2(20),
+    Grade VARCHAR2(5),
+    FOREIGN KEY (StudentID) REFERENCES
+    Student(StudentID),
+    FOREIGN KEY(CourseID) REFERENCES Course(CourseID)
+   );
